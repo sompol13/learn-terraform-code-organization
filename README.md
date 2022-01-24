@@ -8,5 +8,11 @@ Defining multiple environments in the same main.tf file may become hard to manag
 - `mv main.tf prod.tf`
 - Open dev.tf and remove any references to the production environment by deleting the resource blocks with the prod ID. Repeat the process for prod.tf by removing any resource blocks with the dev ID.
 
+### Simulate a hidden dependency
+- In `dev.tf`, update your `random_pet` resource's length attribute to `4`.
+- You might think you are only updating the development environment because you only changed `dev.tf`, but remember, this value is referenced by both `prod` and `dev` resources.
+- `terraform apply`
+- `terraform destroy`
+
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/organize-configuration#create-a-dev-workspace
