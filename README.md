@@ -27,5 +27,11 @@ The previous operation destroyed both the development and production environment
 - `terraform workspace new dev`
 - `terraform apply -var-file=prod.tfvars`
 
+*Destroy your workspace deployments*
+To destroy your infrastructure in a multiple workspace deployment, you must select the intended workspace and run `terraform destroy -var-file=` with the .tfvars file that corresponds to your workspace.
+- `terraform destroy -var-file=prod.tfvars`
+- `terraform workspace select dev`
+- `terraform destroy -var-file=dev.tfvars`
+
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/organize-configuration#create-a-dev-workspace
