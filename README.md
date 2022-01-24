@@ -23,5 +23,9 @@ The previous operation destroyed both the development and production environment
 - `terraform workspace new dev`
 - `terraform apply -var-file=dev.tfvars`
 
+*Create a prod workspace*
+- `terraform workspace new dev`
+- `terraform apply -var-file=prod.tfvars`
+
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/organize-configuration#create-a-dev-workspace
