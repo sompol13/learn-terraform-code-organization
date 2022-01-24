@@ -33,5 +33,7 @@ To destroy your infrastructure in a multiple workspace deployment, you must sele
 - `terraform workspace select dev`
 - `terraform destroy -var-file=dev.tfvars`
 
+<img width="737" alt="Tree" src="https://user-images.githubusercontent.com/33342822/150834535-764c0f54-5f89-431a-9ab9-f7722ac5eae5.png">
+
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/organize-configuration#create-a-dev-workspace
