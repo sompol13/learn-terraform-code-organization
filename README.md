@@ -14,5 +14,14 @@ Defining multiple environments in the same main.tf file may become hard to manag
 - `terraform apply`
 - `terraform destroy`
 
+### Separate states (Workspaces)
+The previous operation destroyed both the development and production environment resources. 
+- `terraform workspace list`
+- `terraform init`
+
+*Create a dev workspace*
+- `terraform workspace new dev`
+- `terraform apply -var-file=dev.tfvars`
+
 ### Reference
 https://learn.hashicorp.com/tutorials/terraform/organize-configuration#create-a-dev-workspace
